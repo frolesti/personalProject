@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+} 
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: honeydew;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piano {
+    display: flex;
+    flex-direction: row;
+}
+
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+
+}
+
+.white {
+    --width: 100px;
+    border: 1px solid #333;
+    background-color: white;
+}
+
+.white:hover {
+    border: 5px ridge whitesmoke;
+}
+
+.black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width)/-2);
+    margin-right: calc(var(--width)/-2);
+    z-index: 2;
+}
+.black:hover {
+    border: 5px ridge #336;
+}
